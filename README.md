@@ -167,46 +167,46 @@ lib/                           # 应用主目录
 以下是TextSphere应用的主要界面和功能展示：
 
 #### 1. 应用启动界面
-![启动界面](assets/images/project/截屏2025-05-11%2023.23.40.png#pic_center =200x200)
+![启动界面](assets/images/project/截屏2025-05-11%2023.23.40.png#pic_center =150x320)
 
 #### 2. 登录注册界面
-![登录注册](assets/images/project/截屏2025-05-11%2023.23.47.png#pic_center =200x200)
+![登录注册](assets/images/project/截屏2025-05-11%2023.23.47.png#pic_center =150x320)
 
 #### 3. 内容广场
-![内容广场](assets/images/project/截屏2025-05-11%2023.23.59.png#pic_center =200x200)
+![内容广场](assets/images/project/截屏2025-05-11%2023.23.59.png#pic_center =150x320)
 
 #### 4. 热门话题浏览
-![热门话题](assets/images/project/截屏2025-05-11%2023.24.09.png#pic_center =200x200)
+![热门话题](assets/images/project/截屏2025-05-11%2023.24.09.png#pic_center =150x320)
 
 #### 5. 个性化推荐
-![个性化推荐](assets/images/project/截屏2025-05-11%2023.24.16.png#pic_center =200x200)
+![个性化推荐](assets/images/project/截屏2025-05-11%2023.24.16.png#pic_center =150x320)
 
 #### 6. 话题详情页
-![话题详情](assets/images/project/截屏2025-05-11%2023.24.24.png#pic_center =200x200)
+![话题详情](assets/images/project/截屏2025-05-11%2023.24.24.png#pic_center =150x320)
 
 #### 7. 兴趣圈子列表
-![兴趣圈子](assets/images/project/截屏2025-05-11%2023.24.36.png#pic_center =200x200)
+![兴趣圈子](assets/images/project/截屏2025-05-11%2023.24.36.png#pic_center =150x320)
 
 #### 8. 圈子详情页
-![圈子详情](assets/images/project/截屏2025-05-11%2023.24.43.png#pic_center =200x200)
+![圈子详情](assets/images/project/截屏2025-05-11%2023.24.43.png#pic_center =150x320)
 
 #### 9. 创建内容
-![创建内容](assets/images/project/截屏2025-05-11%2023.24.51.png#pic_center =200x200)
+![创建内容](assets/images/project/截屏2025-05-11%2023.24.51.png#pic_center =150x320)
 
 #### 10. 消息列表
-![消息列表](assets/images/project/截屏2025-05-11%2023.24.56.png#pic_center =200x200)
+![消息列表](assets/images/project/截屏2025-05-11%2023.24.56.png#pic_center =150x320)
 
 #### 11. 聊天详情
-![聊天详情](assets/images/project/截屏2025-05-11%2023.25.06.png#pic_center =200x200)
+![聊天详情](assets/images/project/截屏2025-05-11%2023.25.06.png#pic_center =150x320)
 
 #### 12. 个人主页
-![个人主页](assets/images/project/截屏2025-05-11%2023.25.12.png#pic_center =200x200)
+![个人主页](assets/images/project/截屏2025-05-11%2023.25.12.png#pic_center =150x320)
 
 #### 13. 关注列表
-![关注列表](assets/images/project/截屏2025-05-11%2023.25.21.png#pic_center =200x200)
+![关注列表](assets/images/project/截屏2025-05-11%2023.25.21.png#pic_center =150x320)
 
 #### 14. 设置页面
-![设置页面](assets/images/project/截屏2025-05-11%2023.25.29.png#pic_center =200x200)
+![设置页面](assets/images/project/截屏2025-05-11%2023.25.29.png#pic_center =150x320)
 
 ---
 
