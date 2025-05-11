@@ -167,46 +167,46 @@ lib/                           # 应用主目录
 以下是TextSphere应用的主要界面和功能展示：
 
 #### 1. 应用启动界面
-![启动界面](assets/images/project/截屏2025-05-11%2023.23.40.png)
+![启动界面](assets/images/project/截屏2025-05-11%2023.23.40.png#pic_center =200x200)
 
 #### 2. 登录注册界面
-![登录注册](assets/images/project/截屏2025-05-11%2023.23.47.png)
+![登录注册](assets/images/project/截屏2025-05-11%2023.23.47.png#pic_center =200x200)
 
 #### 3. 内容广场
-![内容广场](assets/images/project/截屏2025-05-11%2023.23.59.png)
+![内容广场](assets/images/project/截屏2025-05-11%2023.23.59.png#pic_center =200x200)
 
 #### 4. 热门话题浏览
-![热门话题](assets/images/project/截屏2025-05-11%2023.24.09.png)
+![热门话题](assets/images/project/截屏2025-05-11%2023.24.09.png#pic_center =200x200)
 
 #### 5. 个性化推荐
-![个性化推荐](assets/images/project/截屏2025-05-11%2023.24.16.png)
+![个性化推荐](assets/images/project/截屏2025-05-11%2023.24.16.png#pic_center =200x200)
 
 #### 6. 话题详情页
-![话题详情](assets/images/project/截屏2025-05-11%2023.24.24.png)
+![话题详情](assets/images/project/截屏2025-05-11%2023.24.24.png#pic_center =200x200)
 
 #### 7. 兴趣圈子列表
-![兴趣圈子](assets/images/project/截屏2025-05-11%2023.24.36.png)
+![兴趣圈子](assets/images/project/截屏2025-05-11%2023.24.36.png#pic_center =200x200)
 
 #### 8. 圈子详情页
-![圈子详情](assets/images/project/截屏2025-05-11%2023.24.43.png)
+![圈子详情](assets/images/project/截屏2025-05-11%2023.24.43.png#pic_center =200x200)
 
 #### 9. 创建内容
-![创建内容](assets/images/project/截屏2025-05-11%2023.24.51.png)
+![创建内容](assets/images/project/截屏2025-05-11%2023.24.51.png#pic_center =200x200)
 
 #### 10. 消息列表
-![消息列表](assets/images/project/截屏2025-05-11%2023.24.56.png)
+![消息列表](assets/images/project/截屏2025-05-11%2023.24.56.png#pic_center =200x200)
 
 #### 11. 聊天详情
-![聊天详情](assets/images/project/截屏2025-05-11%2023.25.06.png)
+![聊天详情](assets/images/project/截屏2025-05-11%2023.25.06.png#pic_center =200x200)
 
 #### 12. 个人主页
-![个人主页](assets/images/project/截屏2025-05-11%2023.25.12.png)
+![个人主页](assets/images/project/截屏2025-05-11%2023.25.12.png#pic_center =200x200)
 
 #### 13. 关注列表
-![关注列表](assets/images/project/截屏2025-05-11%2023.25.21.png)
+![关注列表](assets/images/project/截屏2025-05-11%2023.25.21.png#pic_center =200x200)
 
 #### 14. 设置页面
-![设置页面](assets/images/project/截屏2025-05-11%2023.25.29.png)
+![设置页面](assets/images/project/截屏2025-05-11%2023.25.29.png#pic_center =200x200)
 
 ---
 
