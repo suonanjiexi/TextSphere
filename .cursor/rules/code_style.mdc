@@ -1,0 +1,75 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 代码风格规范
+
+TextSphere App采用严格的代码风格规范，确保代码的一致性和可维护性。
+
+## Dart代码风格
+
+- 遵循[Dart官方风格指南](mdc:https:/dart.dev/guides/language/effective-dart/style)
+- 使用lowerCamelCase命名变量和方法
+- 使用UpperCamelCase命名类和枚举
+- 使用lowercase_with_underscores命名文件
+- 使用const关键字声明常量
+- 优先使用const构造函数
+- 每个文件只应包含一个主要类
+- 导入语句按以下顺序排列：dart标准库、外部包、相对导入
+
+## Flutter代码风格
+
+### Widgets
+- 每个Widget应该专注于单一功能
+- 拆分大型Widget为多个小型Widget
+- 尽可能使用const构造函数
+- 使用命名参数而非位置参数
+- 遵循以下Widget树结构顺序：
+  1. 布局Widget (Container, Column, Row等)
+  2. 装饰Widget (Padding, Margin, Decoration等)
+  3. 输入Widget (GestureDetector, InkWell等)
+  4. 显示Widget (Text, Image等)
+
+### BLoC模式
+- BLoC类应包含事件处理逻辑
+- Event类应定义所有事件
+- State类应定义所有状态
+- 保持BLoC类简洁，复杂逻辑应移至UseCase
+- 使用流式操作符如map, where, switchMap等处理事件
+
+## 命名约定
+
+### 文件命名
+- bloc文件: `feature_bloc.dart`, `feature_event.dart`, `feature_state.dart`
+- 页面文件: `feature_page.dart`
+- 组件文件: `feature_component.dart`
+- 实体文件: `feature.dart`
+- 存储库文件: `feature_repository.dart`
+- 数据源文件: `feature_data_source.dart`
+- 使用案例文件: `feature_use_case.dart`
+
+### 类命名
+- BLoC类: `FeatureBloc`, `FeatureEvent`, `FeatureState`
+- 页面类: `FeaturePage`
+- 组件类: `FeatureComponent`
+- 实体类: `Feature`
+- 存储库类: `FeatureRepository`, `FeatureRepositoryImpl`
+- 数据源类: `FeatureDataSource`, `FeatureDataSourceImpl`
+- 使用案例类: `FeatureUseCase`
+
+## 注释规范
+
+- 所有公共API都应该有文档注释
+- 使用`///`进行文档注释
+- 复杂的方法应该有详细的注释说明其功能和参数
+- 使用`TODO`、`FIXME`标记需要改进或修复的代码
+- 避免不必要的注释，代码应该自解释
+
+## 错误处理
+
+- 使用Either<Failure, Success>处理操作结果
+- 定义明确的Failure类型
+- 在用例层处理业务逻辑错误
+- 在数据层处理技术性错误
+- 在表示层显示用户友好的错误信息

@@ -1,0 +1,127 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 文件结构规范
+
+TextSphere App项目的文件结构遵循Clean Architecture和Flutter最佳实践，以下是主要目录及其用途：
+
+## 主要目录结构
+
+- [lib/](mdc:lib): 应用主目录
+  - [main.dart](mdc:lib/main.dart): 应用入口点和初始化
+  - [components/](mdc:lib/components): 全局可复用UI组件目录
+  - [core/](mdc:lib/core): 核心功能和配置
+  - [data/](mdc:lib/data): 数据层
+  - [domain/](mdc:lib/domain): 领域层
+  - [models/](mdc:lib/models): 公共模型
+  - [presentation/](mdc:lib/presentation): 表示层
+  - [utils/](mdc:lib/utils): 工具类
+
+## 功能模块组织
+
+每个功能模块按照Clean Architecture分层组织：
+
+### 表示层文件组织
+
+功能模块在表示层的组织结构：
+
+```
+lib/presentation/
+├── blocs/
+│   └── feature/
+│       ├── feature_bloc.dart
+│       ├── feature_event.dart
+│       └── feature_state.dart
+├── pages/
+│   └── feature_page.dart
+└── widgets/
+    └── feature_specific_widget.dart
+```
+
+### 领域层文件组织
+
+功能模块在领域层的组织结构：
+
+```
+lib/domain/
+├── entities/
+│   └── feature.dart
+├── repositories/
+│   └── feature_repository.dart
+└── usecases/
+    └── feature/
+        ├── create_feature_usecase.dart
+        ├── get_feature_usecase.dart
+        └── update_feature_usecase.dart
+```
+
+### 数据层文件组织
+
+功能模块在数据层的组织结构：
+
+```
+lib/data/
+├── datasources/
+│   └── feature/
+│       ├── feature_local_data_source.dart
+│       └── feature_remote_data_source.dart
+├── models/
+│   └── feature_model.dart
+└── repositories/
+    └── feature_repository_impl.dart
+```
+
+## 资源文件组织
+
+- [assets/](mdc:assets): 应用资源目录
+  - [fonts/](mdc:assets/fonts): 字体文件
+  - [icons/](mdc:assets/icons): 图标文件
+  - [images/](mdc:assets/images): 图片资源
+
+## 核心目录组织
+
+核心目录包含与业务逻辑无关的通用功能：
+
+```
+lib/core/
+├── auth/
+│   ├── auth_manager.dart
+│   └── auth_service.dart
+├── cache/
+│   └── cache_manager.dart
+├── di/
+│   └── injection_container.dart
+├── error/
+│   ├── exceptions.dart
+│   └── failures.dart
+├── network/
+│   ├── api_client.dart
+│   └── interceptors.dart
+├── router/
+│   └── app_router.dart
+├── routes/
+│   └── app_routes.dart
+└── theme/
+    └── app_theme.dart
+```
+
+## 工具类组织
+
+工具类目录包含各种工具函数和服务：
+
+```
+lib/utils/
+├── analytics/
+├── app_layout.dart
+├── app_logger.dart
+├── app_resources.dart
+├── responsive_util.dart
+└── secure_storage.dart
+```
+
+## 配置文件
+
+- [pubspec.yaml](mdc:pubspec.yaml): 项目依赖配置文件
+- [analysis_options.yaml](mdc:analysis_options.yaml): 静态分析配置

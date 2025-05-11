@@ -1,0 +1,13 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 主圆形背景 -->
+  <circle cx="100" cy="100" r="90" fill="#4a62e9" />
+  
+  <!-- 文字气泡形状 -->
+  <path d="M160 85C160 116.973 133.973 143 102 143C93.5992 143 85.599 141.193 78.3979 137.979L50 145L58.3979 117.979C53.807 110.186 51 101.388 51 92C51 60.0273 77.0273 34 109 34C140.973 34 167 60.0273 167 92" fill="white" />
+  
+  <!-- 中心小圆形 -->
+  <circle cx="100" cy="100" r="35" fill="#4a62e9" />
+  
+  <!-- 文字 "TS" -->
+  <path d="M90 90H115M90 90V110M115 90V110M90 110H115" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+</svg> 

@@ -1,0 +1,46 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Clean Architecture架构
+
+TextSphere App采用Clean Architecture架构，将应用分为三个主要层次：
+
+## 表示层 (Presentation)
+表示层位于[lib/presentation](mdc:lib/presentation)目录下，包含所有UI相关代码。
+- 使用BLoC模式进行状态管理，所有Bloc文件位于[lib/presentation/blocs](mdc:lib/presentation/blocs)目录下
+- 页面(Pages)位于[lib/presentation/pages](mdc:lib/presentation/pages)目录下
+- 可重用UI组件位于[lib/presentation/widgets](mdc:lib/presentation/widgets)目录下
+
+## 领域层 (Domain)
+领域层包含业务逻辑和规则，位于[lib/domain](mdc:lib/domain)目录下。这一层是纯Dart代码，没有任何Flutter依赖。
+- 业务实体位于[lib/domain/entities](mdc:lib/domain/entities)目录下
+- 仓库接口位于[lib/domain/repositories](mdc:lib/domain/repositories)目录下
+- 用例位于[lib/domain/usecases](mdc:lib/domain/usecases)目录下
+
+## 数据层 (Data)
+数据层负责从各种来源获取数据，位于[lib/data](mdc:lib/data)目录下。
+- 数据源接口和实现位于[lib/data/datasources](mdc:lib/data/datasources)目录下
+- 数据模型(DTOs)位于[lib/data/models](mdc:lib/data/models)目录下
+- 仓库实现位于[lib/data/repositories](mdc:lib/data/repositories)目录下
+
+## 核心层 (Core)
+核心层包含应用的基础设施和配置，位于[lib/core](mdc:lib/core)目录下。
+- 认证相关功能位于[lib/core/auth](mdc:lib/core/auth)目录下
+- 依赖注入配置位于[lib/core/di](mdc:lib/core/di)目录下
+- 错误处理位于[lib/core/error](mdc:lib/core/error)目录下
+- 网络相关配置位于[lib/core/network](mdc:lib/core/network)目录下
+- 路由配置位于[lib/core/router](mdc:lib/core/router)目录下
+- 主题配置位于[lib/core/theme](mdc:lib/core/theme)目录下
+
+## 工具层 (Utils)
+工具层包含各种工具类和帮助函数，位于[lib/utils](mdc:lib/utils)目录下。
+
+## 依赖关系
+依赖方向必须始终从外到内：
+- 表示层 → 领域层 → 数据层
+- 核心层可以被任何层使用
+- 工具层可以被任何层使用
+
+内层不能依赖外层，这意味着领域层不应该导入表示层或数据层的任何内容。

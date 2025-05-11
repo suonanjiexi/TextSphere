@@ -1,0 +1,170 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 状态管理规范
+
+TextSphere App使用BLoC (Business Logic Component) 模式进行状态管理，遵循以下规范：
+
+## BLoC架构
+
+### 组件结构
+
+每个BLoC模块由三个主要文件组成：
+- `feature_bloc.dart`: BLoC类实现
+- `feature_event.dart`: 事件类定义
+- `feature_state.dart`: 状态类定义
+
+### BLoC类实现
+
+```dart
+// 标准BLoC实现示例
+class FeatureBloc extends Bloc<FeatureEvent, FeatureState> {
+  final FeatureUseCase featureUseCase;
+
+  FeatureBloc({required this.featureUseCase}) : super(FeatureInitial()) {
+    on<LoadFeature>(_onLoadFeature);
+    on<UpdateFeature>(_onUpdateFeature);
+    // 其他事件处理...
+  }
+
+  // 事件处理方法
+  Future<void> _onLoadFeature(
+    LoadFeature event,
+    Emitter<FeatureState> emit,
+  ) async {
+    emit(FeatureLoading());
+    final result = await featureUseCase(event.params);
+    result.fold(
+      (failure) => emit(FeatureError(message: _mapFailureToMessage(failure))),
+      (data) => emit(FeatureLoaded(data: data))
+    );
+  }
+
+  // 其他事件处理方法...
+}
+```
+
+### 事件类定义
+
+```dart
+// 标准事件类定义示例
+abstract class FeatureEvent extends Equatable {
+  const FeatureEvent();
+
+  @override
+  List<Object> get props => [];
+}
+
+class LoadFeature extends FeatureEvent {
+  final String id;
+
+  const LoadFeature({required this.id});
+
+  @override
+  List<Object> get props => [id];
+}
+
+class UpdateFeature extends FeatureEvent {
+  final FeatureModel feature;
+
+  const UpdateFeature({required this.feature});
+
+  @override
+  List<Object> get props => [feature];
+}
+
+// 其他事件...
+```
+
+### 状态类定义
+
+```dart
+// 标准状态类定义示例
+abstract class FeatureState extends Equatable {
+  const FeatureState();
+  
+  @override
+  List<Object> get props => [];
+}
+
+class FeatureInitial extends FeatureState {}
+
+class FeatureLoading extends FeatureState {}
+
+class FeatureLoaded extends FeatureState {
+  final FeatureModel data;
+
+  const FeatureLoaded({required this.data});
+
+  @override
+  List<Object> get props => [data];
+}
+
+class FeatureError extends FeatureState {
+  final String message;
+
+  const FeatureError({required this.message});
+
+  @override
+  List<Object> get props => [message];
+}
+
+// 其他状态...
+```
+
+## 依赖注入
+
+BLoC实例通过GetIt依赖注入系统注册和获取：
+
+```dart
+// 在injection_container.dart中注册BLoC
+void registerBlocs() {
+  // 注册FeatureBloc
+  sl.registerFactory(() => FeatureBloc(
+    featureUseCase: sl(),
+  ));
+  
+  // 注册其他BLoC...
+}
+```
+
+## 在UI中使用BLoC
+
+```dart
+// 在UI中使用BLoC示例
+class FeaturePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (_) => sl<FeatureBloc>()..add(const LoadFeature(id: 'someId')),
+      child: BlocBuilder<FeatureBloc, FeatureState>(
+        builder: (context, state) {
+          if (state is FeatureLoading) {
+            return const Center(child: CircularProgressIndicator());
+          } else if (state is FeatureLoaded) {
+            return FeatureContent(data: state.data);
+          } else if (state is FeatureError) {
+            return ErrorView(message: state.message);
+          }
+          return const SizedBox.shrink();
+        },
+      ),
+    );
+  }
+}
+```
+
+## 最佳实践
+
+- BLoC应仅处理用户交互和状态转换，复杂业务逻辑应放在UseCase中
+- 事件应该尽可能简单，只包含调用所需的参数
+- 状态应该是不可变的，使用`const`构造函数
+- 使用Equatable简化相等性比较，确保仅在状态真正变化时才重建UI
+- 使用BlocObserver监控所有BLoC的状态变化，便于调试
+- 避免在BLoC中直接使用BuildContext
+- 在不需要时及时关闭BLoC，避免内存泄漏
+- 对相关性不强的状态使用多个BLoC，而非一个大型BLoC
+- 使用BlocListener处理一次性事件，如导航或显示Snackbar
+- 使用BlocConsumer同时处理状态更新和一次性事件
