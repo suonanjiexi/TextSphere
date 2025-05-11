@@ -167,46 +167,45 @@ lib/                           # 应用主目录
 以下是TextSphere应用的主要界面和功能展示：
 
 #### 1. 应用启动界面
-<img src="assets/images/project/截屏2025-05-11%2023.23.40.png" alt="启动界面" width="150" height="320"/>
+<img src="assets/images/project/截屏2025-05-11%2023.23.40.png" alt="启动界面" width="250" height="420"/>
 
 #### 2. 登录注册界面
-<img src="assets/images/project/截屏2025-05-11%2023.23.47.png" alt="登录注册界面" width="150" height="320"/>
+<img src="assets/images/project/截屏2025-05-11%2023.23.47.png" alt="登录注册界面" width="250" height="420"/>
 
 #### 3. 内容广场
-<img src="assets/images/project/截屏2025-05-11%2023.23.59.png" alt="内容广场" width="150" height="320"/>
+<img src="assets/images/project/截屏2025-05-11%2023.23.59.png" alt="内容广场" width="250" height="420"/>
 
 #### 4. 热门话题浏览
-<img src="assets/images/project/截屏2025-05-11%2023.24.09.png" alt="热门话题浏览" width="150" height="320"/>
+<img src="assets/images/project/截屏2025-05-11%2023.24.09.png" alt="热门话题浏览" width="250" height="420"/>
 
 #### 5. 个性化推荐
-<img src="assets/images/project/截屏2025-05-11%2023.24.16.png" alt="个性化推荐" width="150" height="320"/>
+<img src="assets/images/project/截屏2025-05-11%2023.24.16.png" alt="个性化推荐" width="250" height="420"/>
 
 #### 6. 话题详情页
-<img src="assets/images/project/截屏2025-05-11%2023.24.24.png" alt="话题详情页" width="150" height="320"/>
+<img src="assets/images/project/截屏2025-05-11%2023.24.24.png" alt="话题详情页" width="250" height="420"/>
 
 #### 7. 兴趣圈子列表
-<img src="assets/images/project/截屏2025-05-11%2023.24.36.png" alt="兴趣圈子列表" width="150" height="320"/>
+<img src="assets/images/project/截屏2025-05-11%2023.24.36.png" alt="兴趣圈子列表" width="250" height="420"/>
 
 #### 8. 圈子详情页
-<img src="assets/images/project/截屏2025-05-11%2023.24.43.png" alt="圈子详情页" width="150" height="320"/>
+<img src="assets/images/project/截屏2025-05-11%2023.24.43.png" alt="圈子详情页" width="250" height="420"/>
 
 #### 9. 创建内容
-<img src="assets/images/project/截屏2025-05-11%2023.24.51.png" alt="创建内容" width="150" height="320"/>
+<img src="assets/images/project/截屏2025-05-11%2023.24.51.png" alt="创建内容" width="250" height="420"/>
 
 #### 10. 消息列表
-<img src="assets/images/project/截屏2025-05-11%2023.24.56.png" alt="消息列表" width="150" height="320"/>
+<img src="assets/images/project/截屏2025-05-11%2023.24.56.png" alt="消息列表" width="250" height="420"/>
 
 #### 11. 聊天详情
-<img src="assets/images/project/截屏2025-05-11%2023.25.06.png" alt="聊天详情" width="150" height="320"/>
+<img src="assets/images/project/截屏2025-05-11%2023.25.06.png" alt="聊天详情" width="250" height="420"/>
 
 #### 12. 个人主页
-<img src="assets/images/project/截屏2025-05-11%2023.25.12.png" alt="个人主页" width="150" height="320"/>
+<img src="assets/images/project/截屏2025-05-11%2023.25.12.png" alt="个人主页" width="250" height="420"/>
 
-#### 13. 关注列表
-<img src="assets/images/project/截屏2025-05-11%2023.25.21.png" alt="关注列表" width="150" height="320"/>
+#### 13. 设置页面
+<img src="assets/images/project/截屏2025-05-11%2023.25.21.png" alt="关注列表" width="250" height="420"/>
 
-#### 14. 设置页面
-<img src="assets/images/project/截屏2025-05-11%2023.25.29.png" alt="设置页面" width="150" height="320"/>
+<img src="assets/images/project/截屏2025-05-11%2023.25.29.png" alt="设置页面" width="250" height="420"/>
 
 ---
 
